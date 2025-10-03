@@ -1,0 +1,23 @@
+
+# Runtime (required to run `main.py` which uses Flask)
+Flask>=2.2,<3
+
+# Optional / production servers (pick one for deployment)
+# gunicorn is commonly used on Linux servers
+gunicorn>=20.1.0
+# waitress is a pure-Python production server (works well on Windows)
+# waitress>=2.1.0
+
+# Environment variable loader (useful for config)
+# python-dotenv>=1.0.0
+
+# Development & testing (install separately, e.g. requirements-dev.txt)
+# pytest>=7.0
+# black>=24.0
+# flake8>=6.0
+
+# Notes:
+# - Pin exact versions for reproducible deployments (e.g. Flask==2.2.5)
+# - To install runtime dependencies: `pip install -r requirements.txt`
+# - For dev dependencies consider creating a `requirements-dev.txt` or using a tool
+#   like Poetry/Poetry's dev-dependencies, pip-tools, or pipenv.
