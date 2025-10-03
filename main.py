@@ -10,6 +10,10 @@ estatisticas_futebol = {
     "vitorias_fora": 35
 }
 
+@app.route("/")
+def home():
+    return "Bem-vindo ao servidor de estatísticas de futebol!"
+
 @app.route("/estatisticas")
 def obter_estatisticas():
     # Retorna os dados em JSON, prontos para serem consumidos pelo seu site
