@@ -1,4 +1,5 @@
 from flask import Flask, jsonify
+import os
 
 app = Flask(__name__)
 
@@ -15,3 +16,9 @@ def obter_estatisticas():
     return jsonify(estatisticas_futebol)
 
 # ... mais rotas para times, jogadores, etc.
+
+
+if __name__ == "__main__":
+    # Em deploys (Render, Heroku) a porta é fornecida pela variável de ambiente PORT
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
