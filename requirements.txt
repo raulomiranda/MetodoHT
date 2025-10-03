@@ -2,6 +2,7 @@ Flask==2.3.3
 gunicorn==21.2.0
 python-dotenv==1.0.0
 pymongo[srv]==3.12
+pandas==2.2.3
 
 # Development/test tools (optional) - keep in requirements-dev.txt if you prefer
 # pytest>=7.0.0
