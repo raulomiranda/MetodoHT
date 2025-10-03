@@ -20,9 +20,10 @@ def home():
     try:
         client.admin.command('ping')
         print("Pinged your deployment. You successfully connected to MongoDB!")
+        return "Connection to MongoDB successful!"
     except Exception as e:
         print(e)
-    return e
+        return str(e)
 
 
 
@@ -36,5 +37,5 @@ def inserir_time_mongo():
 
 if __name__ == "__main__":
     # Em deploys (Render, Heroku) a porta é fornecida pela variável de ambiente PORT
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 3000))
     app.run(host="0.0.0.0", port=port)
